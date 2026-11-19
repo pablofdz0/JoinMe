@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: joinme-postgres
+    environment:
+      POSTGRES_DB: joinme
+      POSTGRES_USER: joinme
+      POSTGRES_PASSWORD: joinme
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
