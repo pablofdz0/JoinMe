@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 th:text="${nombreApp}">Nombre de la app</h1>
+    <p>Organiza tus viajes en grupo</p>
+
+    <h2>Destinos disponibles: </h2>
+    <ul>
+        <li th:each="destino : ${destinos}" th:text="${destino}"> Destino </li>
+    </ul>
+</body>
+</html>
