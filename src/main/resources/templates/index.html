@@ -8,8 +8,8 @@
     <h1 th:text="${nombreApp}">Nombre de la app</h1>
     <p>Organiza tus viajes en grupo</p>
 
-    <h2>Destinos disponibles: </h2>
-    <p th:if="${#lists.isEmpty(viajes)}">Viajes</p>
+    <h2>Viajes </h2>
+    <p th:if="${#lists.isEmpty(viajes)}">No hay viajes disponibles</p>
     <ul th:unless="${#lists.isEmpty(viajes)}">
         <li th:each="viaje : ${viajes}">
             <strong th:text="${viaje.nombre}">Nombre</strong>
