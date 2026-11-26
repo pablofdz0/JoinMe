@@ -31,6 +31,21 @@ public class Viaje {
         this.fechaFin = fechaFin;
     }
 
+    public String getNombre(){
+        return this.nombre;
+    }
+
+    public String getDestino(){
+        return this.destino;
+    }
+
+    public LocalDate getFechaInicio(){
+        return this.fechaInicio;
+    }
+
+    public LocalDate getFechaFin(){
+        return this.fechaFin;
+    }
 
 
 }

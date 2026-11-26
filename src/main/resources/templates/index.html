@@ -10,7 +10,12 @@
 
     <h2>Destinos disponibles: </h2>
     <ul>
-        <li th:each="destino : ${destinos}" th:text="${destino}"> Destino </li>
-    </ul>
+        <li th:each="viaje : ${viajes}">
+            <strong th:text = "${viaje.nombre}">Nombre</strong>
+            <span th:text = "${viaje.destino}">Destino</span>
+            (<span th:text = "${viaje.fechaInicio}">inicio</span> a
+            <span th:text = "${viaje.fechaFin}">fin</span>
+        </li>
+    </ul>>
 </body>
 </html>
