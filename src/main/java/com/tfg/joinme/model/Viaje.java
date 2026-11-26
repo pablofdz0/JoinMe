@@ -31,6 +31,8 @@ public class Viaje {
         this.fechaFin = fechaFin;
     }
 
+
+
     public String getNombre(){
         return this.nombre;
     }

@@ -10,9 +10,10 @@ import java.time.LocalDate;
 
 @Configuration
 public class DatosIniciales {
-
+/**
     @Bean
     CommandLineRunner cargaViajes(ViajeRepository viajeRepository){
+
         return args -> {
             if(viajeRepository.count() == 0){
                 viajeRepository.save(new Viaje("Escapada a Lisboa", "Lisboa",
@@ -23,6 +24,8 @@ public class DatosIniciales {
                         LocalDate.of(2027, 8, 1), LocalDate.of(2027, 8, 15)));
             }
         };
-    }
 
+
+    }
+**/
 }

@@ -9,13 +9,15 @@
     <p>Organiza tus viajes en grupo</p>
 
     <h2>Destinos disponibles: </h2>
-    <ul>
+    <p th:if="${#lists.isEmpty(viajes)}">Viajes</p>
+    <ul th:unless="${#lists.isEmpty(viajes)}">
         <li th:each="viaje : ${viajes}">
-            <strong th:text = "${viaje.nombre}">Nombre</strong>
-            <span th:text = "${viaje.destino}">Destino</span>
-            (<span th:text = "${viaje.fechaInicio}">inicio</span> a
-            <span th:text = "${viaje.fechaFin}">fin</span>
+            <strong th:text="${viaje.nombre}">Nombre</strong>
+            <span th:text="${viaje.destino}">Destino</span>
+            (<span th:text="${#temporals.format(viaje.fechaInicio, 'dd/MM/yyyy')}">inicio</span> a
+            <span th:text="${#temporals.format(viaje.fechaFin, 'dd/MM/yyyy')}">fin</span>)
         </li>
-    </ul>>
+    </ul>
+
 </body>
 </html>
