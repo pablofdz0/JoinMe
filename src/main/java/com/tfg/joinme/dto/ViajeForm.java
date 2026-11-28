@@ -1,16 +1,22 @@
 package com.tfg.joinme.dto;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
 public class ViajeForm {
+    @NotBlank
     private String destino;
+    @NotBlank
     private String nombre;
 
+    @NotNull
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate fechaFin;
 
+    @NotNull
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate fechaInicio;
 
