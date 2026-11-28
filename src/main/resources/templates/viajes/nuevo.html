@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuevo vaije · JoinMe</title>
+</head>
+<body>
+    <h1>Nuevo Viaje</h1>
+
+    <form th:action="@{/viajes}" th:object="${viajeForm}" method="post">
+        <p><label>Nombre: <input type="text" th:field="*{nombre}"></label></p>
+        <p><label>Destino: <input type="text" th:field="*{destino}"></label></p>
+        <p><label>Desde: <input type="date" th:field="*{fechaInicio}"></label></p>
+        <p><label>Hasta: <input type="date" th:field="*{fechaFin}"></label></p>
+        <button type="submit">Crear viaje</button>
+    </form>
+
+    <a th:href="@{/}">Volver</a>
+</body>
+</html>
